@@ -1,0 +1,15 @@
+figure/
+cache/
+r-forge/
+*.pdf
+*-tikzDictionary
+*.log
+095-pandoc.sty
+/Sweavel.sty
+.Rproj.user
+.Rhistory
+.DS_Store
+.Rdata
+.Rhistory
+cache/
+cache*

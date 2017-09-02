@@ -1,0 +1,105 @@
+\documentclass[output=inprep,
+  nonflat,
+  modfonts,
+%  colorlinks,
+  showindex,
+  draftmode
+]{langsci/langscibook}
+  
+\input{localmetadata.tex}
+\input{localpackages.tex}
+\input{localhyphenation.tex}
+\bibliography{localbibliography} 
+
+\usepackage{lipsum}
+
+\setmonofont{Consolas}
+
+\definecolor{listingbackground}{gray}{0.95}
+\lstdefinestyle{RStyle}{
+  language=R,
+  basicstyle=\ttfamily\footnotesize,
+  keywordstyle=\ttfamily\bfseries\color{lsDarkOrange},
+  stringstyle=\ttfamily\color{lsDarkBlue},
+  identifierstyle=\ttfamily\color{lsDarkGreenOne},
+  commentstyle=\ttfamily\color{lsLightBlue},
+  upquote=true,
+  breaklines=true,
+  backgroundcolor=\color{listingbackground},
+  framesep=5mm,
+  frame=trlb,
+  framerule=0pt,
+  linewidth=\dimexpr\textwidth-5mm,
+  xleftmargin=5mm
+  %numbers=left, numberstyle=\color{lsLightGray}, stepnumber=1, numbersep=10pt
+  }
+  
+\lstset{style=Rstyle}
+
+
+\begin{document}     
+
+\input{localcommands.tex} 
+ 
+\maketitle                
+\frontmatter
+
+\currentpdfbookmark{Contents}{name} 
+\tableofcontents
+\include{chapters/preface}
+\include{chapters/acknowledgments}
+\include{chapters/abbreviations} 
+\mainmatter         
+
+<< setup, echo= FALSE, include=FALSE, results='asis'>>=
+library(knitr)
+require(lme4, quietly = TRUE)
+require(xtable, quietly = TRUE)
+
+options(formatR.arrow = TRUE)
+render_listings()
+# listing <- function(x, options) {
+#   paste("\\begin{lstlisting}[style=langsciR]\n",
+#     x, "\\end{lstlisting}\n", sep = "")
+# }
+# knit_hooks$set(source=listing, output=listing)
+
+opts_chunk$set(fig.pos='H', message=FALSE,
+               cache=TRUE, warning=FALSE,
+               fig.align='center', comment ="",
+	             background='#F7F7F7',
+	             tidy=FALSE)
+
+opts_knit$set(root.dir=normalizePath('./'))
+opts_chunk$set(fig.path=normalizePath('./figures/'), dev='pdf')
+opts_chunk$set(cache.path=normalizePath('./cache/'))
+@
+
+<<child="chapters/01.Rnw">>=
+@
+
+<<child="chapters/02.Rnw">>=
+@
+
+<<child="chapters/03.Rnw">>=
+@
+
+<<child="chapters/04.Rnw">>=
+@
+
+<<child="chapters/05.Rnw">>=
+@
+
+<<child="chapters/06.Rnw">>=
+@
+
+<<child="chapters/07.Rnw">>=
+@
+
+<<child="chapters/08.Rnw">>=
+@
+
+% \input{localseealso.tex} 
+\input{backmatter.tex} 
+\end{document} 
+

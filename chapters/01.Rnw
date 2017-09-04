@@ -10,15 +10,15 @@ opts_knit$set(self.contained=FALSE)
 \cite{MacDonaldGardner2000}
 
 
-\tblssy[lsLightGray]{glass}{Test SY}{\lipsum[66]}
+\tblssy[lsLightGray]{glass}{Test SY}{Blabla}
 
-\tblsli[lsLightGray]{1}{Test LI}{\lipsum[66]}
+\tblsli[lsLightGray]{1}{Test LI}{Blabla}
 
-\tblsfi[lsYellow]{Test FI}{\lipsum[66]}
+\tblsfi[lsYellow]{Test FI}{Blabla}
 
-\tblsfr[lsYellow]{glass}{Test FR}{\lipsum[66]}
+\tblsfr[lsYellow]{glass}{Test FR}{Blabla}
 
-\tblsfd{lsLightGray}{1}{Test FD}{\lipsum[66]}
+\tblsfd{lsLightGray}{1}{Test FD}{Blabla}
 
 \pagebreak
 

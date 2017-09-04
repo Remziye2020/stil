@@ -9,11 +9,9 @@
 \input{localmetadata.tex}
 \input{localpackages.tex}
 \input{localhyphenation.tex}
-\bibliography{localbibliography} 
+\bibliography{localbibliography}
 
-\usepackage{lipsum}
-
-\setmonofont{Inconsolatar.ttf}
+\setmonofont{Inconsolata-g}
 
 \definecolor{listingbackground}{gray}{0.95}
 \lstdefinestyle{RStyle}{
@@ -52,18 +50,17 @@
 
 << setup, cache=FALSE, echo=FALSE, include=FALSE, results='asis'>>=
 opts_knit$set(self.contained=FALSE)
-require(lme4, quietly = TRUE)
-require(xtable, quietly = TRUE)
 
-
-options(formatR.arrow = TRUE)
-render_listings()
-
-opts_chunk$set(fig.pos='H', message=FALSE,
+opts_chunk$set(cache.path='cache/',
+               fig.path='figures/',
+               fig.pos='H', message=FALSE,
                cache=TRUE, warning=FALSE,
                fig.align='center', comment ="",
 	             background='#F7F7F7',
-	             tidy=FALSE)
+	             tidy=FALSE,
+               formatR.arrow = TRUE)
+
+render_listings()
 
 @
 

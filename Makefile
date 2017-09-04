@@ -1,4 +1,3 @@
-
 FIGUREDIR = figures
 CACHEDIR = cache
 
@@ -105,7 +104,7 @@ clean:
 	*.run.xml smil.tex smil.pgs smil.bcf \
 	chapters/*aux chapters/*~ chapters/*.bak chapters/*.backup \
 	langsci/*/*aux langsci/*/*~ langsci/*/*.bak langsci/*/*.backup \
-	cache/* figures/*
+	cache/* figures/* cache*.*
 	
 realclean: clean
 	rm -f *.dvi *.ps *.pdf

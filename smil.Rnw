@@ -19,7 +19,7 @@
 \lstdefinestyle{RStyle}{
   language=R,
   basicstyle=\ttfamily\footnotesize,
-  keywordstyle=\ttfamily\bfseries\color{lsDarkOrange},
+  keywordstyle=\ttfamily\color{lsDarkOrange},
   stringstyle=\ttfamily\color{lsDarkBlue},
   identifierstyle=\ttfamily\color{lsDarkGreenOne},
   commentstyle=\ttfamily\color{lsLightBlue},

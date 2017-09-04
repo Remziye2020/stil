@@ -55,6 +55,7 @@ opts_knit$set(self.contained=FALSE)
 require(lme4, quietly = TRUE)
 require(xtable, quietly = TRUE)
 
+
 options(formatR.arrow = TRUE)
 render_listings()
 

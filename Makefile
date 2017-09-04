@@ -2,65 +2,69 @@
 FIGUREDIR = figures
 CACHEDIR = cache
 
-pdf: main.bbl main.pdf  #by the time main.pdf, bib assures there is a newer aux file
+pdf: smil.bbl smil.pdf 
 
 all: pod cover
 
-complete: index main.pdf
+complete: index smil.pdf
 
-index:  main.snd
+index:  smil.snd
  
-main.pdf: main.aux
-	xelatex main 
+smil.pdf: smil.aux
+	xelatex smil 
 
-main.aux: main.tex $(wildcard local*.tex)
-	xelatex -no-pdf main 
+smil.aux: smil.tex $(wildcard local*.tex)
+	xelatex -no-pdf smil 
 
 # Before the normal LSP make begins, we need to make TeX from Rnw.
-main.tex: main.Rnw $(wildcard chapters/*.Rnw)
+smil.tex: smil.Rnw $(wildcard chapters/*.Rnw)
 	Rscript \
 	  -e "library(knitr)" \
 	  -e "knitr::knit('$<','$@')"
 
+# Make R files.
+%.R: %.Rnw
+	Rscript -e "Sweave('$^', driver=Rtangle())"
+
 # Create only the book.
-main.bbl: main.tex localbibliography.bib  
-	xelatex -no-pdf main
-	biber main
+smil.bbl: smil.tex localbibliography.bib  
+	xelatex -no-pdf smil
+	biber smil
 
 
-main.snd: main.bbl
-	touch main.adx main.sdx main.ldx
-	sed -i s/.*\\emph.*// main.adx 
-	sed -i 's/hyperindexformat{\\\(infn {[0-9]*\)}/\1/' main.sdx
-	sed -i 's/hyperindexformat{\\\(infn {[0-9]*\)}/\1/' main.adx
-	sed -i 's/hyperindexformat{\\\(infn {[0-9]*\)}/\1/' main.ldx
+smil.snd: smil.bbl
+	touch smil.adx smil.sdx smil.ldx
+	sed -i s/.*\\emph.*// smil.adx 
+	sed -i 's/hyperindexformat{\\\(infn {[0-9]*\)}/\1/' smil.sdx
+	sed -i 's/hyperindexformat{\\\(infn {[0-9]*\)}/\1/' smil.adx
+	sed -i 's/hyperindexformat{\\\(infn {[0-9]*\)}/\1/' smil.ldx
 # 	python3 fixindex.py
-# 	mv mainmod.adx main.adx
-	makeindex -o main.and main.adx
-	makeindex -o main.lnd main.ldx
-	makeindex -o main.snd main.sdx 
-	xelatex main 
+# 	mv mainmod.adx smil.adx
+	makeindex -o smil.and smil.adx
+	makeindex -o smil.lnd smil.ldx
+	makeindex -o smil.snd smil.sdx 
+	xelatex smil 
  
 
 cover: FORCE
-	convert main.pdf\[0\] -quality 100 -background white -alpha remove -bordercolor "#999999" -border 2  cover.png
+	convert smil.pdf\[0\] -quality 100 -background white -alpha remove -bordercolor "#999999" -border 2  cover.png
 	cp cover.png googlebooks_frontcover.png
 	convert -geometry 50x50% cover.png covertwitter.png
-	convert main.pdf\[0\] -quality 100 -background white -alpha remove -bordercolor "#999999" -border 2  -resize x495 coveromp.png
+	convert smil.pdf\[0\] -quality 100 -background white -alpha remove -bordercolor "#999999" -border 2  -resize x495 coveromp.png
 	display cover.png
 
 
 googlebooks: googlebooks_interior.pdf
 
 googlebooks_interior.pdf: complete
-	cp main.pdf googlebooks_interior.pdf
-	pdftk main.pdf cat 1 output googlebooks_frontcover.pdf 
+	cp smil.pdf googlebooks_interior.pdf
+	pdftk smil.pdf cat 1 output googlebooks_frontcover.pdf 
 
 openreview: openreview.pdf
 	
 
-openreview.pdf: main.pdf
-	pdftk main.pdf multistamp orstamp.pdf output openreview.pdf 
+openreview.pdf: smil.pdf
+	pdftk smil.pdf multistamp orstamp.pdf output openreview.pdf 
 
 proofreading: proofreading.pdf
 	
@@ -74,8 +78,8 @@ paperhive:
 	echo "langsci.github.io/BOOKID"
 	firefox https://paperhive.org/documents/new
 	
-proofreading.pdf: main.pdf
-	pdftk main.pdf multistamp prstamp.pdf output proofreading.pdf 
+proofreading.pdf: smil.pdf
+	pdftk smil.pdf multistamp prstamp.pdf output proofreading.pdf 
 
 blurb: blurb.html blurb.tex biosketch.tex biosketch.html
 
@@ -98,15 +102,16 @@ clean:
 	*.log *.blg *.ilg \
 	*.aux *.toc *.cut *.out *.tpm *.bbl *-blx.bib *_tmp.bib \
 	*.glg *.glo *.gls *.wrd *.wdv *.xdv *.mw *.clr \
-	*.run.xml main.tex main.pgs main.bcf \
+	*.run.xml smil.tex smil.pgs smil.bcf \
 	chapters/*aux chapters/*~ chapters/*.bak chapters/*.backup \
-	langsci/*/*aux langsci/*/*~ langsci/*/*.bak langsci/*/*.backup
+	langsci/*/*aux langsci/*/*~ langsci/*/*.bak langsci/*/*.backup \
+	cache/* figures/*
 	
 realclean: clean
 	rm -f *.dvi *.ps *.pdf
 
 chapterlist:
-	grep chapter main.toc|sed "s/.*numberline {[0-9]\+}\(.*\).newline.*/\\1/" 
+	grep chapter smil.toc|sed "s/.*numberline {[0-9]\+}\(.*\).newline.*/\\1/" 
 
 podcover:
 	bash podcovers.sh

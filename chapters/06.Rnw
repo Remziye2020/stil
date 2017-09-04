@@ -1,2 +1,7 @@
+% !Rnw root = ../smil.Rnw
+<<setup06, cache=FALSE, echo=FALSE, include=FALSE, results='asis'>>=
+opts_knit$set(self.contained=FALSE)
+@
+
 \chapter{Generalised models}
 \label{sec:generalisedmodels}

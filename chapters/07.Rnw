@@ -1,3 +1,8 @@
+% !Rnw root = ../smil.Rnw
+<<setup07, cache=FALSE, echo=FALSE, include=FALSE, results='asis'>>=
+opts_knit$set(self.contained=FALSE)
+@
+
 \chapter{Mixed models}
 \label{sec:mixedmodels}
 

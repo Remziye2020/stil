@@ -1,2 +1,7 @@
+% !Rnw root = ../smil.Rnw
+<<setup02, cache=FALSE, echo=FALSE, include=FALSE, results='asis'>>=
+opts_knit$set(self.contained=FALSE)
+@
+
 \chapter{Describing data}
 \label{sec:describingdata}

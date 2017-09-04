@@ -11,5 +11,6 @@ Encoding: UTF-8
 
 RnwWeave: knitr
 LaTeX: XeLaTeX
+RootDocument: smil.Rnw
 
 BuildType: Makefile

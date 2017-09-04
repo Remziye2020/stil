@@ -56,6 +56,7 @@ library(knitr)
 require(lme4, quietly = TRUE)
 require(xtable, quietly = TRUE)
 
+
 options(formatR.arrow = TRUE)
 render_listings()
 # listing <- function(x, options) {

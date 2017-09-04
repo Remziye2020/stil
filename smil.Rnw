@@ -13,7 +13,7 @@
 
 \usepackage{lipsum}
 
-\setmonofont{Consolas}
+\setmonofont{Inconsolatar.ttf}
 
 \definecolor{listingbackground}{gray}{0.95}
 \lstdefinestyle{RStyle}{
@@ -36,7 +36,6 @@
   
 \lstset{style=Rstyle}
 
-
 \begin{document}     
 
 \input{localcommands.tex} 
@@ -51,19 +50,14 @@
 \include{chapters/abbreviations} 
 \mainmatter         
 
-<< setup, echo= FALSE, include=FALSE, results='asis'>>=
-library(knitr)
+<< setup, cache=FALSE, echo=FALSE, include=FALSE, results='asis'>>=
+opts_knit$set(self.contained=FALSE)
 require(lme4, quietly = TRUE)
 require(xtable, quietly = TRUE)
 
 
 options(formatR.arrow = TRUE)
 render_listings()
-# listing <- function(x, options) {
-#   paste("\\begin{lstlisting}[style=langsciR]\n",
-#     x, "\\end{lstlisting}\n", sep = "")
-# }
-# knit_hooks$set(source=listing, output=listing)
 
 opts_chunk$set(fig.pos='H', message=FALSE,
                cache=TRUE, warning=FALSE,
@@ -71,9 +65,6 @@ opts_chunk$set(fig.pos='H', message=FALSE,
 	             background='#F7F7F7',
 	             tidy=FALSE)
 
-opts_knit$set(root.dir=normalizePath('./'))
-opts_chunk$set(fig.path=normalizePath('./figures/'), dev='pdf')
-opts_chunk$set(cache.path=normalizePath('./cache/'))
 @
 
 <<child="chapters/01.Rnw">>=

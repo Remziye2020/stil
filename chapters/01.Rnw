@@ -52,6 +52,6 @@ hist(sims, breaks = 100)
 See Figure~\ref{fig:simttestecdf} for the cumulative density of p-values under the null in a series of \Sexpr{nsim} t-tests.
 This was plotted using the following command.
 
-<<simtestcdf001, echo=TRUE, fig.keep="none">>=
+<<echo=TRUE, fig.keep="none">>=
 <<simttestecdf>>
 @

@@ -1,9 +1,15 @@
-\documentclass[output=inprep,
-  nonflat,
-  modfonts,
+\documentclass[
+  nonewtxmath,
+  output=inprep
+  ,
+  nonflat
+  ,
+  modfonts
+  ,
 %  colorlinks,
-  showindex,
-  draftmode
+  showindex
+%  ,
+%  draftmode
 ]{langsci/langscibook}
   
 \input{localmetadata.tex}

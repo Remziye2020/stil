@@ -16,7 +16,7 @@ smil.aux: smil.tex $(wildcard local*.tex)
 	xelatex -no-pdf smil 
 
 # Before the normal LSP make begins, we need to make TeX from Rnw.
-smil.tex: smil.Rnw $(wildcard chapters/*.Rnw)
+smil.tex: smil.Rnw $(wildcard chapters/*.Rnw) $(wildcard chapters/*.tex)
 	Rscript \
 	  -e "library(knitr)" \
 	  -e "knitr::knit('$<','$@')"

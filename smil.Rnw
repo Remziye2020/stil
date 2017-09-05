@@ -1,49 +1,22 @@
 \documentclass[
-  nonewtxmath,
-  output=inprep
-  ,
-  nonflat
-  ,
-  modfonts
-  ,
-%  colorlinks,
-  showindex
-%  ,
-%  draftmode
+  nonewtxmath
+  , output=inprep
+  , nonflat
+  , modfonts
+  , colorlinks
+  , showindex
+%  , draftmode
 ]{langsci/langscibook}
   
 \input{localmetadata.tex}
 \input{localpackages.tex}
 \input{localhyphenation.tex}
-\bibliography{localbibliography}
+\input{localcommands.tex} 
 
-\setmonofont{Inconsolata-g}
-
-\definecolor{listingbackground}{gray}{0.95}
-\lstdefinestyle{RStyle}{
-  language=R,
-  basicstyle=\ttfamily\footnotesize,
-  keywordstyle=\ttfamily\color{lsDarkOrange},
-  stringstyle=\ttfamily\color{lsDarkBlue},
-  identifierstyle=\ttfamily\color{lsDarkGreenOne},
-  commentstyle=\ttfamily\color{lsLightBlue},
-  upquote=true,
-  breaklines=true,
-  backgroundcolor=\color{listingbackground},
-  framesep=5mm,
-  frame=trlb,
-  framerule=0pt,
-  linewidth=\dimexpr\textwidth-5mm,
-  xleftmargin=5mm
-  %numbers=left, numberstyle=\color{lsLightGray}, stepnumber=1, numbersep=10pt
-  }
-  
-\lstset{style=Rstyle}
+\bibliography{localbibliography} 
 
 \begin{document}     
 
-\input{localcommands.tex} 
- 
 \maketitle                
 \frontmatter
 
@@ -52,7 +25,7 @@
 \include{chapters/preface}
 \include{chapters/acknowledgments}
 \include{chapters/abbreviations} 
-\mainmatter         
+\mainmatter  
 
 << setup, cache=FALSE, echo=FALSE, include=FALSE, results='asis'>>=
 opts_knit$set(self.contained=FALSE)

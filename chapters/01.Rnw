@@ -7,58 +7,80 @@ opts_knit$set(self.contained=FALSE)
 \chapter{Science, data, and statistics}
 \label{sec:sciencedataandstatistics}
 
-\cite{MacDonaldGardner2000}
+
+\section{Science, theories, and why we are not falsificationists}
+\label{sec:sciencetheoriesandwhywearenotfalsificationists}
 
 
-\tblssy[lsLightGray]{glass}{Test SY}{Blabla}
-
-\tblsli[lsLightGray]{1}{Test LI}{Blabla}
-
-\tblsfi[lsYellow]{Test FI}{Blabla}
-
-\tblsfr[lsYellow]{glass}{Test FR}{Blabla}
-
-\tblsfd{lsLightGray}{1}{Test FD}{Blabla}
-
-\pagebreak
-
-In this book, code listing are displayed as inline blocks such as the following simple code which simulates t-tests under the null hypothesis in order to demonstrate that all p-values have equal probability under the null.
-
-<<simttest>>=
-# Set simulation parameters.
-nsim  <- 1000
-n     <- 100
-meen  <- 0
-stdev <- 1
-
-# Data structure for results.
-sims <- rep(NA, nsim)
-
-# Simulations.
-for (i in 1:nsim) {
-  a <- rnorm(n, mean = meen, sd = stdev)
-  b <- rnorm(n, mean = meen, sd = stdev)
-  p <- t.test(a,b)$p.value
-  sims[i] <- p
-}
-@
+\section{Data and inference}
+\label{sec:dataandinference}
 
 
-<<simttestscatter, fig.pos="H", fig.height=4, fig.cap="Scatterplot of p-values.", echo=FALSE>>=
-plot(sims, pch=19, cex=0.1, col = "darkgreen")
-@
+\section{The importance of statistics}
+\label{sec:theimportanceofstatistics}
 
-<<simttestecdf, fig.pos="H", fig.height=4, fig.cap="Empirical cumulative density distribution of p-values.", echo=FALSE>>=
-plot(ecdf(sims))
-@
 
-<<simttesthist, fig.pos="H", fig.height=4, fig.cap="Histogram of p-values.", echo=FALSE>>=
-hist(sims, breaks = 100)
-@
+\section{Why fake and simulated data (and how)?}
+\label{sec:whyfakeandsimulateddataandhow}
 
-See Figure~\ref{fig:simttestecdf} for the cumulative density of p-values under the null in a series of \Sexpr{nsim} t-tests.
-This was plotted using the following command:
 
-<<echo=TRUE, fig.keep="none">>=
-<<simttestecdf>>
-@
+\section{What R is, and why you should learn how to use it}
+\label{sec:whatrisandwhyyoushouldlearnhowtouseit}
+
+
+% OLD TESTING STUFF
+
+% \cite{MacDonaldGardner2000}
+% 
+% \tblssy[lsLightGray]{glass}{Test SY}{Blabla}
+% 
+% \tblsli[lsLightGray]{1}{Test LI}{Blabla}
+% 
+% \tblsfi[lsYellow]{Test FI}{Blabla}
+% 
+% \tblsfr[lsYellow]{glass}{Test FR}{Blabla}
+% 
+% \tblsfd{lsLightGray}{1}{Test FD}{Blabla}
+% 
+% \pagebreak
+% 
+% In this book, code listing are displayed as inline blocks such as the following simple code which simulates t-tests under the null hypothesis in order to demonstrate that all p-values have equal probability under the null.
+% 
+% <<simttest>>=
+% # Set simulation parameters.
+% nsim  <- 1000
+% n     <- 100
+% meen  <- 0
+% stdev <- 1
+% 
+% # Data structure for results.
+% sims <- rep(NA, nsim)
+% 
+% # Simulations.
+% for (i in 1:nsim) {
+%   a <- rnorm(n, mean = meen, sd = stdev)
+%   b <- rnorm(n, mean = meen, sd = stdev)
+%   p <- t.test(a,b)$p.value
+%   sims[i] <- p
+% }
+% @
+% 
+% 
+% <<simttestscatter, fig.pos="H", fig.height=4, fig.cap="Scatterplot of p-values.", echo=FALSE>>=
+% plot(sims, pch=19, cex=0.1, col = "darkgreen")
+% @
+% 
+% <<simttestecdf, fig.pos="H", fig.height=4, fig.cap="Empirical cumulative density distribution of p-values.", echo=FALSE>>=
+% plot(ecdf(sims))
+% @
+% 
+% <<simttesthist, fig.pos="H", fig.height=4, fig.cap="Histogram of p-values.", echo=FALSE>>=
+% hist(sims, breaks = 100)
+% @
+% 
+% See Figure~\ref{fig:simttestecdf} for the cumulative density of p-values under the null in a series of \Sexpr{nsim} t-tests.
+% This was plotted using the following command:
+% 
+% <<echo=TRUE, fig.keep="none">>=
+% <<simttestecdf>>
+% @

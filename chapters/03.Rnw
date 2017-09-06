@@ -5,3 +5,23 @@ opts_knit$set(self.contained=FALSE)
 
 \chapter{Visualising data}
 \label{sec:visualisingdata}
+
+
+\section{When should we visualise data?}
+\label{sec:whenshouldwevisualisedata}
+
+
+\section{Visualising categorical data}
+\label{sec:visualisingcategoricaldata}
+
+
+\section{Visualising numerical data}
+\label{sec:visualisingnumericaldata}
+
+
+\section{Visualising relationships within data}
+\label{sec:visualisingrelationshipswithindata}
+
+
+\section{Visualising data in R}
+\label{sec:Visualisingdatainr}

@@ -5,3 +5,19 @@ opts_knit$set(self.contained=FALSE)
 
 \chapter{Models}
 \label{sec:models}
+
+
+\section{Models, tests, and model selection}
+\label{sec:modelstestsandmodelselection}
+
+
+\section{Modeling linear relationships}
+\label{sec:modelinglinearrelationships}
+
+
+\section{More complex linear models and their interpretation}
+\label{sec:morecomplexlinearmodelsandtheirinterpretation}
+
+
+\section{Linear models in R}
+\label{sec:linearmodelsinr}

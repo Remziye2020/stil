@@ -5,3 +5,27 @@ opts_knit$set(self.contained=FALSE)
 
 \chapter{Tests}
 \label{sec:tests}
+
+
+\section{Fisher, Neyman-Pearson, and NHST}
+\label{sec:fisherneymanpearsonandnhst}
+
+
+\section{Two simple tests}
+\label{sec:twosimpletests}
+
+
+\section{Types of errors and statistical power}
+\label{sec:typesoferrorsandstatisticalpower}
+
+
+\section{Some tests for categorical data}
+\label{sec:sometestsforcategoricaldata}
+
+
+\section{Some tests for numerical data}
+\label{sec:sometestsfornumericaldata}
+
+
+\section{Doing tests in R}
+\label{sec:doingtestsinr}

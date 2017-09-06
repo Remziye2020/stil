@@ -4,7 +4,26 @@ opts_knit$set(self.contained=FALSE)
 require(lme4, quietly = TRUE)
 @
 
-\chapter{Mixed models}
-\label{sec:mixedmodels}
+\chapter{Hierarchical models}
+\label{sec:hierarchicalmodels}
 
+
+\section{The standard folklore about random effects}
+\label{sec:thestandardfolkloreaboutrandomeffects}
+
+
+\section{Modeled and unmodeled effects}
+\label{sec:modeledandunmodeledeffects}
+
+
+\section{Specifying hierarchical models}
+\label{sec:specifyinghierarchicalmodels}
+
+
+\section{Interpreting hierarchical models}
+\label{sec:interpretinghierarchicalmodels}
+
+
+\section{Hierarchical models in R}
+\label{sec:hierarchicalmodelsinr}
 

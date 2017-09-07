@@ -3,7 +3,6 @@
 opts_knit$set(self.contained=FALSE)
 @
 
-
 \chapter{Science, data, and statistics}
 \label{sec:sciencedataandstatistics}
 
@@ -29,19 +28,24 @@ opts_knit$set(self.contained=FALSE)
 
 
 % OLD TESTING STUFF
-
+%
 % \cite{MacDonaldGardner2000}
-% 
-% \tblssy[lsLightGray]{glass}{Test SY}{Blabla}
-% 
-% \tblsli[lsLightGray]{1}{Test LI}{Blabla}
-% 
+
+Test
+
+\tblscolourbox{lsLightGray}{Colourbox}{Blabla}
+\tblsiconcolourbox{lsLightGray}{glass}{Iconcolourbox}{Blabla}
+
+\tblssandwich{lsLightGray}{Sandwich}{Blabla}
+\tblsiconsandwich{lsYellow}{book}{Iconsandwich}{Blabla}
+
 % \tblsfi[lsYellow]{Test FI}{Blabla}
-% 
-% \tblsfr[lsYellow]{glass}{Test FR}{Blabla}
-% 
-% \tblsfd{lsLightGray}{1}{Test FD}{Blabla}
-% 
+
+\tblsframebox{lsLightGray}{Framebox}{Blabla}
+\tblsiconframebox{lsYellow}{bulb}{Iconframebox}{Blabla}
+
+%\tblsfd{lsLightGray}{1}{Test FD}{Blabla}
+
 % \pagebreak
 % 
 % In this book, code listing are displayed as inline blocks such as the following simple code which simulates t-tests under the null hypothesis in order to demonstrate that all p-values have equal probability under the null.

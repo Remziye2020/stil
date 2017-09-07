@@ -19,12 +19,12 @@ opts_knit$set(self.contained=FALSE)
 \label{sec:theimportanceofstatistics}
 
 
-\section{Why fake and simulated data (and how)?}
+\section{Why fake and simulated data -- and how?}
 \label{sec:whyfakeandsimulateddataandhow}
 
 
-\section{What R is, and why you should learn how to use it}
-\label{sec:whatrisandwhyyoushouldlearnhowtouseit}
+\section{What is R, and why should you learn how to use it?}
+\label{sec:whatisrandwhyshouldyoulearnhowtouseit}
 
 
 % OLD TESTING STUFF

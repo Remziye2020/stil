@@ -1,14 +1,20 @@
-%%% MDFRAMED STYLES DEFS %%%
+%%%%%%%%%%%%% Low-level commands %%%%%%%%%%%%%
 
-\usepackage{multicol}
 \usepackage[framemethod=tikz]{mdframed}
-\mdfsetup{skipabove=2\baselineskip,skipbelow=2\baselineskip,frametitlefont=\sffamily\bfseries\Large, needspace=4\baselineskip, splittopskip=1.5\baselineskip}
+\mdfsetup{skipabove=2\baselineskip,
+          skipbelow=2\baselineskip,
+          frametitlefont=\sffamily\bfseries\Large,
+          needspace=4\baselineskip,
+          splittopskip=1.5\baselineskip}
 \mdfsetup{apptotikzsetting={\tikzset{mdfbackground/.append style={draw=none}}}}
+
 \newcommand{\langscisymbol}{book}
-\newlength{\trennlinie}
-\setlength{\trennlinie}{1.25mm}
 \newcommand{\tblsboxcolor}{black}
-\newcommand{\tblslinecolour}{lsYellow}
+\newcommand{\tblslinecolor}{lsYellow}
+\newcommand{\tblsfillcolor}{black!12}
+
+\newlength{\tblslinewidth}
+\setlength{\tblslinewidth}{1.25mm}
 
 \newlength{\symbolwidth}
 \setlength{\symbolwidth}{6mm}
@@ -16,58 +22,39 @@
 \setlength{\logowidth}{6mm}
 \newlength{\logolinewidth}
 \setlength{\logolinewidth}{2.5pt}
+\newlength{\abovetitlespacing}
+\setlength{\abovetitlespacing}{5mm}
+\newlength{\allmargins}
+\setlength{\allmargins}{5mm}
 
-\mdfdefinestyle{yellowexercise}{
-	linewidth=1.5pt,
-	linecolor=\tblslinecolour,
-	innerleftmargin=5mm,
-	innerrightmargin=5mm,
-	innerbottommargin=5mm,
-	frametitleaboveskip=10mm,
-	frametitlebelowskip=5mm,
+\mdfdefinestyle{tblsfilledbox}{
+	hidealllines=true,
+	backgroundcolor=\tblsfillcolor,
+	frametitleaboveskip=\abovetitlespacing,
+	frametitlebelowskip=0mm,
 	frametitlerule=false,
-	innertopmargin=0,
 	repeatframetitle=false,
-	firstextra={\useasboundingbox (P) rectangle (P);
-	            \node[xshift=5mm,
-	                  right,
-	                  draw=\tblslinecolour,
-	                  line width=\logolinewidth,
-	                  rectangle,
-	                  minimum size=\logowidth,
-	                  fill=white] at (P-|O) {\color{\tblslinecolour}
-	                                         \includegraphics[width=\symbolwidth]{langsci/graphics/tbls-\langscisymbol.pdf}
-	                                        };
-             }, % if environment is on multiple pages, print this on the first page.
-	singleextra={\useasboundingbox (P) rectangle (P);
-	             \node[xshift=5mm,
-	                   right,
-	                   draw=\tblslinecolour,
-	                   line width=\logolinewidth,
-	                   rectangle,
-	                   minimum size=\logowidth,
-	                   fill=white
-	                  ] at (P-|O) {\color{\tblslinecolour}
-	                               \includegraphics[width=\symbolwidth]{langsci/graphics/tbls-\langscisymbol.pdf}
-	                              };
-	            } % if env. does not span multiple pages, print the same.
+	innerleftmargin=\allmargins,
+	innerrightmargin=\allmargins,
+	innerbottommargin=\allmargins,
+	innertopmargin=\allmargins
 }
-	
-\mdfdefinestyle{greyexercise}{
+
+\mdfdefinestyle{tblsfillediconbox}{
 	everyline=true,
 	ignorelastdescenders=true,
 	linewidth=0pt,
 	backgroundcolor=\tblsboxcolor,
-	innerleftmargin=5mm,
-	innerrightmargin=5mm,
-	innerbottommargin=5mm,
-	innertopmargin=5mm,
-	frametitleaboveskip=10mm,
+	innerleftmargin=\allmargins,
+	innerrightmargin=\allmargins,
+	innerbottommargin=\allmargins,
+	innertopmargin=\allmargins,
+	frametitleaboveskip=\dimexpr\abovetitlespacing+0.6\symbolwidth,
 	frametitlebelowskip=0mm,
 	frametitlerule=false,
 	repeatframetitle=false,
 	firstextra={\useasboundingbox (P) rectangle (P);
-	            \node[xshift=5mm,
+	            \node[xshift=\allmargins,
 	                  right,
 	                  draw=\tblsboxcolor,
 	                  line width=\logolinewidth,
@@ -79,7 +66,7 @@
 	                             };
 	           }, % if environment is on multiple pages, print this on the first page.
 	singleextra={\useasboundingbox (P) rectangle (P);
-	             \node[xshift=5mm,
+	             \node[xshift=\allmargins,
 	                   right,
 	                   draw=\tblsboxcolor,
 	                   line width=\logolinewidth,
@@ -93,55 +80,55 @@
 }
 	
 
-\mdfdefinestyle{tblsbox}{
+\mdfdefinestyle{tblslinebox}{
 	leftline=false,
 	rightline=false,
-	frametitleaboveskip=10mm,
-	frametitlebelowskip=5mm,
+	frametitleaboveskip=\abovetitlespacing,
+	frametitlebelowskip=0mm,
 	frametitlerule=false,
 	repeatframetitle=false,
-	linewidth=\trennlinie,
-	linecolor=\tblslinecolour,
-	innerbottommargin=5mm,
-	innertopmargin=5mm,
+	linewidth=\tblslinewidth,
+	linecolor=\tblslinecolor,
+	innerbottommargin=\allmargins,
+	innertopmargin=\allmargins,
 	innerleftmargin=0mm,
 	innerrightmargin=0	
 	}
 	
 	
-\mdfdefinestyle{tblsiconbox}{
+\mdfdefinestyle{tblsiconlinebox}{
 	leftline=false,
 	rightline=false,
-	frametitleaboveskip=10mm,
-	frametitlebelowskip=5mm,
+	frametitleaboveskip=\dimexpr\abovetitlespacing+0.6\symbolwidth,
+	frametitlebelowskip=0mm,
 	frametitlerule=false,
 	repeatframetitle=false,
-	linewidth=\trennlinie,
-	linecolor=\tblslinecolour,
-	innerbottommargin=5mm,
-	innertopmargin=5mm,
+	linewidth=\tblslinewidth,
+	linecolor=\tblslinecolor,
+	innerbottommargin=\allmargins,
+	innertopmargin=\allmargins,
 	innerleftmargin=0mm,
 	innerrightmargin=0,
 	firstextra={\useasboundingbox (P) rectangle (P);
-	            \node[xshift=5mm,
+	            \node[xshift=\allmargins,
 	                  right,
-	                  draw=\tblslinecolour,
+	                  draw=\tblslinecolor,
 	                  line width=\logolinewidth,
 	                  rectangle,
 	                  minimum size=\logowidth,
-	                  fill=white] at (P-|O) {\color{\tblslinecolour}
+	                  fill=white] at (P-|O) {\color{\tblslinecolor}
 	                                         \includegraphics[width=\symbolwidth]{langsci/graphics/tbls-\langscisymbol.pdf}
 	                                        };
              }, % if environment is on multiple pages, print this on the first page.
 	singleextra={\useasboundingbox (P) rectangle (P);
-	             \node[xshift=5mm,
+	             \node[xshift=\allmargins,
 	                   right,
-	                   draw=\tblslinecolour,
+	                   draw=\tblslinecolor,
 	                   line width=\logolinewidth,
 	                   rectangle,
 	                   minimum size=\logowidth,
 	                   fill=white
-	                  ] at (P-|O) {\color{\tblslinecolour}
+	                  ] at (P-|O) {\color{\tblslinecolor}
 	                               \includegraphics[width=\symbolwidth]{langsci/graphics/tbls-\langscisymbol.pdf}
 	                              };
 	            } % if env. does not span multiple pages, print the same.
@@ -149,118 +136,107 @@
 	
 	
 \mdfdefinestyle{tblsframedbox}{
-	frametitleaboveskip=5mm,
+	frametitleaboveskip=\abovetitlespacing,
 	frametitlebelowskip=0mm,
 	frametitlerule=false,
 	repeatframetitle=false,
-	linewidth=\trennlinie,
-	linecolor=\tblslinecolour,
-	innerbottommargin=5mm,
-	innertopmargin=5mm
+	linewidth=\tblslinewidth,
+	linecolor=\tblslinecolor,
+	innerbottommargin=\allmargins,
+	innertopmargin=\allmargins
 }	
-	
-	
+
 	
 \mdfdefinestyle{tblsiconframedbox}{
-	linewidth=\trennlinie,
-	linecolor=\tblslinecolour,
-	innerleftmargin=5mm,
-	innerrightmargin=5mm,
-	innerbottommargin=5mm,
-	frametitleaboveskip=10mm,
-	frametitlebelowskip=5mm,
+	linewidth=\tblslinewidth,
+	linecolor=\tblslinecolor,
+	innerleftmargin=\allmargins,
+	innerrightmargin=\allmargins,
+	innerbottommargin=\allmargins,
+	frametitleaboveskip=2\abovetitlespacing,
+	frametitlebelowskip=\allmargins,
 	frametitlerule=false,
 	innertopmargin=0,
 	repeatframetitle=false,
 	firstextra={\useasboundingbox (P) rectangle (P);
-	            \node[xshift=5mm,
+	            \node[xshift=\allmargins,
 	                  right,
-	                  draw=\tblslinecolour,
+	                  draw=\tblslinecolor,
 	                  line width=\logolinewidth,
 	                  rectangle,
 	                  minimum size=\logowidth,
-	                  fill=white] at (P-|O) {\color{\tblslinecolour}
+	                  fill=white] at (P-|O) {\color{\tblslinecolor}
 	                                         \includegraphics[width=\symbolwidth]{langsci/graphics/tbls-\langscisymbol.pdf}
 	                                        };
              }, % if environment is on multiple pages, print this on the first page.
 	singleextra={\useasboundingbox (P) rectangle (P);
-	             \node[xshift=5mm,
+	             \node[xshift=\allmargins,
 	                   right,
-	                   draw=\tblslinecolour,
+	                   draw=\tblslinecolor,
 	                   line width=\logolinewidth,
 	                   rectangle,
 	                   minimum size=\logowidth,
 	                   fill=white
-	                  ] at (P-|O) {\color{\tblslinecolour}
+	                  ] at (P-|O) {\color{\tblslinecolor}
 	                               \includegraphics[width=\symbolwidth]{langsci/graphics/tbls-\langscisymbol.pdf}
 	                              };
 	            } % if env. does not span multiple pages, print the same.
 }
-	
-	
-\newcommand{\tblsfillcolour}{black!12}
-\mdfdefinestyle{tblsfilledbox}{
-	hidealllines=true,
-	backgroundcolor=\tblsfillcolour,
-	frametitleaboveskip=5mm,
-	frametitlebelowskip=0mm,
-	frametitlerule=false,
-	repeatframetitle=false,
-	innerleftmargin=5mm,
-	innerrightmargin=5mm,
-	innerbottommargin=5mm,
-	innertopmargin=5mm
-}
 
 
 
-% {colour}{icon}{title}{text}
-\newcommand{\tblsiconcolourbox}[4]{
-  \renewcommand{\langscisymbol}{#2}
-  \renewcommand{\tblsboxcolor}{#1}
-  \begin{mdframed}[style=greyexercise,frametitle={#3}]
-    #4
-  \end{mdframed}
-}
+%%%%%%%%%%%%% Higher-level commands %%%%%%%%%%%%%
 
-% {colour}{title}{text}
-\newcommand{\tblscolourbox}[3]{
-  \renewcommand{\tblsfillcolour}{#1}
+
+% {color}{title}{text}
+\newcommand{\tblscolorbox}[3]{
+  \renewcommand{\tblsfillcolor}{#1}
   \begin{mdframed}[style=tblsfilledbox,frametitle={#2}]
     #3
   \end{mdframed}
 }
 
-% {colour}{title}{text}
-\newcommand{\tblssandwich}[3]{
-  \renewcommand{\tblslinecolour}{#1}
-  \begin{mdframed}[style=tblsbox,frametitle={#2}]
-    #3
-  \end{mdframed}
-}
 
-% {colour}{icon}{title}{text}
-\newcommand{\tblsiconsandwich}[4]{
-  \renewcommand{\tblslinecolour}{#1}
+% {color}{icon}{title}{text}
+\newcommand{\tblsiconcolorbox}[4]{
   \renewcommand{\langscisymbol}{#2}
-  \begin{mdframed}[style=tblsiconbox,frametitle={#3}]
+  \renewcommand{\tblsboxcolor}{#1}
+  \begin{mdframed}[style=tblsfillediconbox,frametitle={#3}]
     #4
   \end{mdframed}
 }
 
 
-% \tblsfd{colour}{title}{content}
+% {color}{title}{text}
+\newcommand{\tblssandwich}[3]{
+  \renewcommand{\tblslinecolor}{#1}
+  \begin{mdframed}[style=tblslinebox,frametitle={#2}]
+    #3
+  \end{mdframed}
+}
+
+% {color}{icon}{title}{text}
+\newcommand{\tblsiconsandwich}[4]{
+  \renewcommand{\tblslinecolor}{#1}
+  \renewcommand{\langscisymbol}{#2}
+  \begin{mdframed}[style=tblsiconlinebox,frametitle={#3}]
+    #4
+  \end{mdframed}
+}
+
+
+% \tblsfd{color}{title}{content}
 \newcommand{\tblsframebox}[3]{
-  \renewcommand{\tblslinecolour}{#1}
+  \renewcommand{\tblslinecolor}{#1}
   \begin{mdframed}[style=tblsframedbox,frametitle={#2}]
     #3
   \end{mdframed}
 }
 
-% \tblsfd{colour}{icon}{title}{content}
+% \tblsfd{color}{icon}{title}{content}
 \newcommand{\tblsiconframebox}[4]{
   \renewcommand{\langscisymbol}{#2}
-  \renewcommand{\tblslinecolour}{#1}
+  \renewcommand{\tblslinecolor}{#1}
   \begin{mdframed}[style=tblsiconframedbox,frametitle={#3}]
     #4
   \end{mdframed}

@@ -31,20 +31,14 @@ opts_knit$set(self.contained=FALSE)
 %
 % \cite{MacDonaldGardner2000}
 
-Test
-
-\tblscolourbox{lsLightGray}{Colourbox}{Blabla}
-\tblsiconcolourbox{lsLightGray}{glass}{Iconcolourbox}{Blabla}
+\tblscolorbox{lsLightGray}{Colourbox}{Blabla}
+\tblsiconcolorbox{lsLightGray}{glass}{Iconcolorbox}{Blabla}
 
 \tblssandwich{lsLightGray}{Sandwich}{Blabla}
 \tblsiconsandwich{lsYellow}{book}{Iconsandwich}{Blabla}
 
-% \tblsfi[lsYellow]{Test FI}{Blabla}
-
 \tblsframebox{lsLightGray}{Framebox}{Blabla}
 \tblsiconframebox{lsYellow}{bulb}{Iconframebox}{Blabla}
-
-%\tblsfd{lsLightGray}{1}{Test FD}{Blabla}
 
 % \pagebreak
 % 

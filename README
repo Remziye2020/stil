@@ -10,8 +10,6 @@ publisher) in an adapted form for use with knitr.
 The Inconsolata-g font can be obtained here:
 http://www.fantascienza.net/leonardo/ar/inconsolatag/inconsolata-g_font.zip
 
-I renamed it Inconsolatar.ttf.
-
 On Ubuntu:
 sudo mkdir /usr/share/fonts/truetype/customfonts
 sudo cp Inconsolatar.ttf /usr/share/fonts/truetype/customfonts/

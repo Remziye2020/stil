@@ -34,13 +34,13 @@ opts_knit$set(self.contained=FALSE)
 Testing:
 
 \tblscolorbox{lsLightGray}{Colorbox}{Blabla}
-\tblsiconcolorbox{lsLightGray}{glass}{Iconcolorbox}{Blabla}
+\tblscolorbox[r]{lsLightGray}{Iconcolorbox}{Blabla}
 
 \tblssandwich{lsLightGray}{Sandwich}{Blabla}
-\tblsiconsandwich{lsYellow}{book}{Iconsandwich}{Blabla}
+\tblssandwich[pencil]{lsYellow}{Iconsandwich}{Blabla}
 
 \tblsframebox{lsLightGray}{Framebox}{Blabla}
-\tblsiconframebox{lsYellow}{bulb}{Iconframebox}{Blabla}
+\tblsframebox[code]{lsYellow}{Iconframebox}{Blabla}
 
 % \pagebreak
 % 

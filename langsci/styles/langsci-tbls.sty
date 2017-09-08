@@ -1,5 +1,6 @@
 %%%%%%%%%%%%% Low-level commands %%%%%%%%%%%%%
 
+\usepackage{ifthen}
 \usepackage[framemethod=tikz]{mdframed}
 \mdfsetup{skipabove=2\baselineskip,
           skipbelow=2\baselineskip,
@@ -10,6 +11,7 @@
 
 \newcommand{\langscisymbol}{book}
 \newcommand{\tblscolor}{black!12}
+\newcommand{\localstyle}{}
 
 \newlength{\tblslinewidth}
 \setlength{\tblslinewidth}{1.25mm}
@@ -186,56 +188,40 @@
 %%%%%%%%%%%%% Higher-level commands %%%%%%%%%%%%%
 
 
-% {color}{title}{text}
-\newcommand{\tblscolorbox}[3]{
-  \renewcommand{\tblscolor}{#1}
-  \begin{mdframed}[style=tblsfilledbox,frametitle={#2}]
-    #3
-  \end{mdframed}
-}
-
-
-% {color}{icon}{title}{text}
-\newcommand{\tblsiconcolorbox}[4]{
-  \renewcommand{\langscisymbol}{#2}
-  \renewcommand{\tblscolor}{#1}
-  \begin{mdframed}[style=tblsfillediconbox,frametitle={#3}]
+% [icon]{color}{title}{text}
+\newcommand{\tblscolorbox}[4][]{
+  \ifthenelse{\equal{#1}{}}
+    {\renewcommand{\localstyle}{tblsfilledbox}}
+    {\renewcommand{\localstyle}{tblsfillediconbox}
+     \renewcommand{\langscisymbol}{#1}}
+  \renewcommand{\tblscolor}{#2}
+  \begin{mdframed}[style=\localstyle,frametitle={#3}]
     #4
   \end{mdframed}
 }
 
 
-% {color}{title}{text}
-\newcommand{\tblssandwich}[3]{
-  \renewcommand{\tblscolor}{#1}
-  \begin{mdframed}[style=tblslinebox,frametitle={#2}]
-    #3
-  \end{mdframed}
-}
-
-% {color}{icon}{title}{text}
-\newcommand{\tblsiconsandwich}[4]{
-  \renewcommand{\tblscolor}{#1}
-  \renewcommand{\langscisymbol}{#2}
-  \begin{mdframed}[style=tblsiconlinebox,frametitle={#3}]
+% [icon]{color}{title}{text}
+\newcommand{\tblssandwich}[4][]{
+  \ifthenelse{\equal{#1}{}}
+    {\renewcommand{\localstyle}{tblslinebox}}
+    {\renewcommand{\localstyle}{tblsiconlinebox}
+     \renewcommand{\langscisymbol}{#1}}
+  \renewcommand{\tblscolor}{#2}
+  \begin{mdframed}[style=\localstyle,frametitle={#3}]
     #4
   \end{mdframed}
 }
 
 
-% {color}{title}{content}
-\newcommand{\tblsframebox}[3]{
-  \renewcommand{\tblscolor}{#1}
-  \begin{mdframed}[style=tblsframedbox,frametitle={#2}]
-    #3
-  \end{mdframed}
-}
-
-% {color}{icon}{title}{content}
-\newcommand{\tblsiconframebox}[4]{
-  \renewcommand{\langscisymbol}{#2}
-  \renewcommand{\tblscolor}{#1}
-  \begin{mdframed}[style=tblsiconframedbox,frametitle={#3}]
+% [icon]{color}{title}{content}
+\newcommand{\tblsframebox}[4][]{
+  \ifthenelse{\equal{#1}{}}
+    {\renewcommand{\localstyle}{tblsframedbox}}
+    {\renewcommand{\localstyle}{tblsiconframedbox}
+     \renewcommand{\langscisymbol}{#1}}
+  \renewcommand{\tblscolor}{#2}
+  \begin{mdframed}[style=\localstyle,frametitle={#3}]
     #4
   \end{mdframed}
 }

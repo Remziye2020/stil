@@ -1,13 +1,13 @@
-Statistical Modeling in Linguistics
+Statistical Inference in Linguistics
 Roland Schäfer, Freie Universität Berlin
 
-My CC-BY text book about GLMMs in linguistics and everything you need to
-understand them. Uses the template from Language Science Press (my preferred
-publisher) in an adapted form for use with knitr.
+My CC-BY text book about statistics in linguistics. Uses the template
+from Language Science Press (my preferred publisher) in an adapted
+form for use with knitr.
 
 ---
 
-The Inconsolata-g font can be obtained here:
+The required Inconsolata-g font can be obtained here:
 http://www.fantascienza.net/leonardo/ar/inconsolatag/inconsolata-g_font.zip
 
 On Ubuntu:

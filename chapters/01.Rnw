@@ -6,32 +6,9 @@ opts_knit$set(self.contained=FALSE)
 \chapter{Science, data, and statistics}
 \label{sec:sciencedataandstatistics}
 
+\section{Some typestting tests}
 
-\section{Science, theories, and why we are not falsificationists}
-\label{sec:sciencetheoriesandwhywearenotfalsificationists}
-
-
-\section{Data and inference}
-\label{sec:dataandinference}
-
-
-\section{The importance of statistics}
-\label{sec:theimportanceofstatistics}
-
-
-\section{Why fake and simulated data -- and how?}
-\label{sec:whyfakeandsimulateddataandhow}
-
-
-\section{What is R, and why should you learn how to use it?}
-\label{sec:whatisrandwhyshouldyoulearnhowtouseit}
-
-
-% OLD TESTING STUFF
-%
-% \cite{MacDonaldGardner2000}
-
-Testing:
+\citet{Mayo2018}
 
 \tblscolorbox{lsLightGray}{Colorbox}{Blabla}
 \tblscolorbox[r]{lsLightGray}{Iconcolorbox}{Blabla}
@@ -43,7 +20,7 @@ Testing:
 \tblsframebox[code]{lsYellow}{Iconframebox}{Blabla}
 
 % \pagebreak
-% 
+%
 In this book, code listing are displayed as inline blocks such as the following simple code which simulates t-tests under the null pothesis in order to demonstrate that all p-values have equal probability under the null.
 
 <<simttest>>=

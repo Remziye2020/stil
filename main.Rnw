@@ -1,6 +1,6 @@
 \documentclass[
   nonewtxmath
-  , output=inprep
+  , output=final
   , nonflat
   , modfonts
   , colorlinks
@@ -45,15 +45,16 @@ render_listings()
 @
 
 \part{Wissenschaftliche Inferenz in der Linguistik}
+\label{part:wissenschaftlicheinferenzinderlinguistik}
 
-<<child="chapters/LinguistischeEmpirie.Rnw">>=
-@
-
-<<child="chapters/LinguistischeTheorie.Rnw">>=
-@
-
-<<child="chapters/SinnUndUnsinn.Rnw">>=
-@
+% <<child="chapters/LinguistischeEmpirie.Rnw">>=
+% @
+%
+% <<child="chapters/LinguistischeTheorie.Rnw">>=
+% @
+%
+% <<child="chapters/SinnUndUnsinn.Rnw">>=
+% @
 
 
 \part{Systeme der statistischen Inferenz}
@@ -61,31 +62,31 @@ render_listings()
 <<child="chapters/Fisher.Rnw">>=
 @
 
-<<child="chapters/NeymanPearson.Rnw">>=
-@
-
-<<child="chapters/LikelihoodismBayesisch.Rnw">>=
-@
-
-<<child="chapters/SevereTests.Rnw">>=
-@
+% <<child="chapters/NeymanPearson.Rnw">>=
+% @
+%
+% <<child="chapters/LikelihoodismBayesisch.Rnw">>=
+% @
+%
+% <<child="chapters/SevereTests.Rnw">>=
+% @
 
 \part{Datenanalyse}
 
-<<child="StudienPlanen/01.Rnw">>=
-@
-
-<<child="chapters/DatenErfassen.Rnw">>=
-@
-
-<<child="chapters/DatenBeschreiben.Rnw">>=
-@
-
-<<child="chapters/DatenVisualisieren.Rnw">>=
-@
-
-<<child="chapters/DatenSimulieren.Rnw">>=
-@
+% <<child="chapters/StudienPlanen.Rnw">>=
+% @
+%
+% <<child="chapters/DatenErfassen.Rnw">>=
+% @
+%
+% <<child="chapters/DatenBeschreiben.Rnw">>=
+% @
+%
+% <<child="chapters/DatenVisualisieren.Rnw">>=
+% @
+%
+% <<child="chapters/DatenSimulieren.Rnw">>=
+% @
 
 
 \part{Statistische Tests}
@@ -93,25 +94,25 @@ render_listings()
 <<child="chapters/Zufallsverteilungen.Rnw">>=
 @
 
-<<child="chapters/Zaehldatenvergleiche.Rnw">>=
+% <<child="chapters/Zaehldatenvergleiche.Rnw">>=
+% @
+
+<<child="chapters/Mittelwertvergleiche.Rnw">>=
 @
 
-<<child="chapters/Mittelwertvergleich.Rnw">>=
-@
-
-<<child="chapters/Varianzanalyse.Rnw">>=
-@
-
-<<child="chapters/Alternativen.Rnw">>=
-@
+% <<child="chapters/Varianzanalyse.Rnw">>=
+% @
+%
+% <<child="chapters/Alternativen.Rnw">>=
+% @
 
 \part{Modelle}
 
-<<child="chapters/GeneralisierteLineareModelle.Rnw">>=
-@
-
-<<child="chapters/HierarchischeModelle.Rnw">>=
-@
+% <<child="chapters/GeneralisierteLineareModelle.Rnw">>=
+% @
+%
+% <<child="chapters/HierarchischeModelle.Rnw">>=
+% @
 
 \input{localseealso.tex}
 \input{backmatter.tex}

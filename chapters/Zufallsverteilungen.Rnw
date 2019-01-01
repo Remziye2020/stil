@@ -1,5 +1,5 @@
 % !Rnw root = ../smil.Rnw
-<<setup01, cache=FALSE, echo=FALSE, include=FALSE, results='asis'>>=
+<<setupZufallsverteilungen, cache=FALSE, echo=FALSE, include=FALSE, results='asis'>>=
 opts_knit$set(self.contained=FALSE)
 @
 

@@ -1,0 +1,16 @@
+% !Rnw root = ../smil.Rnw
+<<setupFisher, cache=FALSE, echo=FALSE, include=FALSE, results='asis'>>=
+opts_knit$set(self.contained=FALSE)
+@
+
+\chapter{Ronald Fishers System der statistischen Inferenz}
+\label{sec:ronaldfisherssystemderstatistischeninferenz}
+
+\section{Randomsierung}
+\label{sec:randomisierung}
+
+\section{The Lady Tasting Tea}
+\label{sec:theladytastingtea}
+
+\section{Die Rolle der Nullhypothese}
+\label{sec:dierolledernullhypothese}

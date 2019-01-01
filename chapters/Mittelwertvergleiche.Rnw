@@ -1,0 +1,98 @@
+% !Rnw root = ../smil.Rnw
+<<setupTtest, cache=FALSE, echo=FALSE, include=FALSE, results='asis'>>=
+opts_knit$set(self.contained=FALSE)
+@
+
+\chapter{Mittelwervergleiche}
+\label{sec:mittelwertvegleiche}
+
+\section{Beispiele in diesem Kapitel und typische Fragestellungen}
+\label{sec:beispieleindiesemkapitelundtypischefragestellungen}
+
+Dieses Kapitel für in mögliche Inferenzen über Mittelwerte ein.
+Mittelwerte sind für Daten definiert, die numerisch skaliert sind, also unsere typischen Beispiele wie:
+
+\begin{itemize}
+  \item Wortlängen,
+  \item Satzlängen,
+  \item numerisch gemessene Werte auf Dokumentebene,%
+    \footnote{Wenn diese Werte aber als Anteilwerte bzw. Prozentwerte erfasst wurden, sind die hier vorgestellten Tests nicht anwendbar.
+    Warum, wird in diesem und den folgenden Kapiteln deutlich.}
+  \item Reaktionszeiten wie \zb Lesezeiten,
+  \item Scores aus Magnitude Estimation-Experimenten.
+\end{itemize}
+
+Oft interessiert uns, ob sich die Zentraltendenzen (als Abhängige) in verschiedenen Gruppen unterschiedlich sind, wobei die Gruppen durch die Unabhänigge gegeben ist.
+Beispiele wären \zb Unterschieden der Mittel von:
+
+\begin{itemize}
+  \item Wortlängen von zwei verschiedenen Autoren,
+  \item Nomen-Verb-Quotienten in Texten aus verschiedenen Genres,
+  \item Lesezeiten unter verschiedenen syntaktischen Extraktionsbedingungen,
+  \item ME-Bewertungen von Standard- und Ninctstandard-Varianten.
+\end{itemize}
+
+Eventuell interessiert auch der Vergleich solcher Messungen mit einer quasi als bekannt angenommenen Population.
+Liegt zum Beispiel ein sehr großes Korpus des Gegenwartsdeutschen vor, aus dem die mittlere Wortlänge für ein Genre mit hoher Konfidenz auf Populationsebene geschätzt werden kann, wollen wir evtl.\ die mittlere Wortlänge aus einer kleineren Sammlung von Texten mit dem als bekannt angenommenen Populationsmittel vergleichen.
+Diese Texte können auch durchaus in einem leidlichen gut kontrollierten Szenario entstanden sein, \zb als Aufsätze einer schulischen Lerner*innen-Gruppe.
+
+In den beiden genannten Fällen sollte nun, wenn wir eine statistischen Inferenz anstreben und einen Test durchführen wollen, eine substantielle theoretische Hypothese vorliegen, gemäß derer es im Mittel einen tatsächlichen Unterschied zwischen mindestens zwei Gruppen oder der Grundgesamtheit und einer Gruppe gibt.
+Die Gruppen werden definiert durch eine kategoriale Unabhängige.
+Nehmen wir die Lesezeiten als Beispiel, dann wäre die substantielle Hypothese wahrscheinlich die aus einem bestimmten Processing-Modell abgeleitete psycholinguistische Vermutung, dass ein bestimmter Extraktionstyp mit mentalen Operationen verbunden ist, die zu einer Längung der Lesezeit führen (\zb Surprisal).
+
+TODO Erkläre, dass es eigentlich immer um GG-Mittel geht!
+
+Die substantielle Hypothese mündet stets die inferenzlogische Form wie in Gleichung~\ref{eq:ttestsubstantiellehypothese}.
+\Hcal\ ist definiert als: "`Es gibt einen Unterschied zwischen den Mitteln der zwei Populationen $X_1$ und $X_2$."'
+
+\begin{equation}
+  \label{eq:ttestsubstantiellehypothese}
+  \Hcal\defeq\bar{X_1}\neq\bar{X_2}
+\end{equation}
+
+Hypothese \Hcal\ in Gleichung~\ref{eq:ttestsubstantiellehypothese} ist grundlegend verschieden von $\Hcal*$ in Gleichung~ \ref{eq:ttestnichtsubstantiellehypothese}.
+$\Hcal*$ wird hier definiert als:
+"`Es gibt einen Mittelwertunterschied zwischen Stichprobe $x_1$ und Stichprobe $x_2$."'
+
+\begin{equation}
+  \label{eq:ttestnichtsubstantiellehypothese}
+  \Hcal*\defeq\bar{x_1}\neq\bar{x_2}
+\end{equation}
+
+Diese Hypothese ist, wie in Teil~\ref{part:wissenschaftlicheinferenzinderlinguistik} ausführlich argumentiert wurde, trivialerweise fast immer richtig.
+Außerdem ist sie \textit{beweisbar}, indem wir die Mittelwerte der Stichproben bilden und vergleichen.
+Das macht sie wissenschaftlich völlig \textit{uninteressant}.
+Die angestrebte Inferenz zielt immer auf einen grundlegenden datengenerierenden Prozess, nicht auf einzelne Stichproben.
+
+Die korrekte inferenzlogische Form der substantiellen Hypothese in Gleichung~\ref{eq:ttestsubstantiellehypothese} ist aber nicht mit der eigentlichen Hypothese zu verwechseln.
+Die (in der Regel in Worten oder in einem Modellformalismus) zu formulierende Theorie \textit{\Tcal\ bettet \Hcal\ kausal ein}, beschreibt also einen Mechanismus, der dazu führt, dass die Reaktionszeiten oder die Wortlängen usw.\ in den beobachteten Gruppen verschieden sind.
+Es muss also gelten, dass \Tcal\Cause\Hcal.
+
+
+\section{Verteilungen von Stichprobenmitteln und die zentralen Grenzwertsätze}
+\label{sec:verteilungenvonstrichprobenmittelnunddiezentralengrenzwertsaetze}
+
+\section{Stichproben- und Populationsmittel}
+\label{sec:stichrobenundpopulationsmittel}
+
+\section{Stichproben- und Stichprobenmittel}
+\label{sec:stichrobenundstichprobenmittel}
+
+\section{Messwiederholungen}
+\label{sec:messwiederholungen}
+
+\section{Simulationen zu t-Tests}
+\label{sec:simulationenvonttests}
+
+\section{Voraussetzungen für t-Tests testen}
+\label{sec:voraussetzungenfürttetstesten}
+
+\section{Zur Absurdität von t-Tests in der Korpuslinguistik}
+\label{sec:zurabsurditaetvonttestsinderkorpuslinguistik}
+
+\section{Power von t-Tests}
+\label{sec:powervonttests}
+
+\section{Interpretation von t-Tests in N-P}
+\label{sec:interpretationvonttestsinnp}
+

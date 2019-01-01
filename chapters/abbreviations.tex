@@ -2,7 +2,7 @@
 
 \section*{Abbreviations}
 
-\begin{longtable}{p{0.1\textwidth}p{0.9\textwidth}}
+\begin{longtable}{p{0.15\textwidth}p{0.9\textwidth}}
   ANOVA & analysis of variance \\
   CDF   & cumulative distribution function \\
   CLT   & central limit theorem \\
@@ -21,70 +21,70 @@
 
 Symbols are overloaded ad-hoc to denote either a (possibly indexed) value such as $s_x=1$ (for ``the population mean of variable $x$ is $1$'') or a function such as $s(x)=1$ where applicable.
 
-\begin{longtable}{p{0.1\textwidth}p{0.9\textwidth}}
+\begin{longtable}{p{0.1\textwidth}p{0.1\textwidth}p{0.8\textwidth}}
+	\multicolumn{3}{c}{\textbf{Mathematische Symbole}} \\
+  $x\thicksim \mathbf{D}$   &              & Zufallsvariable $x$ \textit{folgt} der Zufallsverteilung $\mathbf{D}$ \\
+  $\bar{x}$        &  $mean(x)$    & arithmetisches Stichprobenmittel von $x$\\
+  $\tilde{x}$      &  $med(x)$     & Stichprobenmedian von $x$\\
+  $\hat{x}$        &               & Vorhergesagter Wert für $x$\\
+                   &               & \\
+	\multicolumn{3}{c}{\textbf{Symbole in Buchstabenform}} \\
 
-		    &  \textbf{Mathematical symbols} \\
-
-  % Pure symbols
-  $x\thicksim D$    & \textit{x follows D} ($x$ a variable, $D$ a distribution) \\
-  $\bar{x}$         & sample arithmetic mean of $x$\\
-  $\tilde{x}$       & sample median of $x$\\
-  $\hat{x}$         & predicted value of $x$\\
-
-                    & \\
-		    &  \textbf{Letter-like symbols} \\
-
-  % Letter-like.
-  $\alpha$          & alpha level \\
-  $\alpha_i$        & intercept $i$ \\
-  $\beta$           & beta level \\
-  $\beta_i$         & first-level coefficient $i$ \\
-  $df$              & degrees of freedom \\
-  $e$               & Euler constant \\
-  $\epsilon$        & observation-level error \\
-  $f$               & frequency \\
-  $F$               & F statistic (see ANOVA)\\
-  $\gamma_i$        & second-level coefficient $i$ \\
-  $H$               & Kruskal-Wallis statistic \\
-  $H_0$             & null hypothesis \\
-  $H_A$             & alternative hypothesis \\
-  $M_M$             & main hypothesis \\
-  $IQR$             & inter-quartile range \\
-  $\mathcal{L}$     & Likelihood \\
-  $\mu$             & population mean \\
-  $\mu_i$           & mean of modeled effect $i$ \\
-  $n$               & sample size \\
-  $N$               & population size \\
-  $O$               & Odds \\
-  $p$               & proportion \\
-  $P_i$             & the $i$-th percentile \\
-  $Pr$              & probability \\
-  $\varphi$         & dispersion parameter \\
-  $Q_i$             & $i$-th quartile \\
-  $r$               & sample covariance coefficient \\
-  $r^2$             & coefficient of determination \\
-  $R^2$             & multifactorial coefficient of determination \\
-  $\rho$            & population covariance coefficient \\
-  $s$               & sample standard deviation of $x$ \\
-  $s^2$             & sample variance of $x$ \\
-  $SE$              & standard error \\
-  $SS$              & sum of squares \\
-  $\sigma$          & population standard deviation \\
-  $\sigma^2$        & population variance \\
-  $U$               & Mann-Whitney statistic \\
-  $\chi^2$          & chi square statistic \\
+  $\alpha$          &              & Alphaniveau (Neyman-Pearson, NHST) \\
+  $\alpha_i$        &              & Intercept $i$ \\
+  $\beta$           &              & Betaniveau (Neyman-Pearson) \\
+  $\beta_i$         &              & Koeffizient $i$ der ersten Ebene (hierarchische Modelle) \\
+  $df$              &              & Freiheitsgrade (\textit{degrees of freedom}) \\
+  $e$               &              & Euler-Konstante \\
+  $\epsilon$        &              & Fehler/Residuum auf Beobachtungsebene (Modelle) \\
+  $f$               &              & Frequenz \\
+  $F$               &              & F-Quotien (siehe ANOVA)\\
+  $\gamma_i$        &              & Koeffizient $i$ der zweiten Ebene (hierarchische Modelle)  \\
+                    & $cov(x, y)$  & Kovarianz von $x$ und $y$ \\
+  $H$               &              & Kruskal-Wallis-Statistik \\
+  $H_0$             &              & Nullhypothese (Fisher) \\
+  $H_A$             &              & Alternativhypothese (Neyman-Pearson) \\
+  $M_M$             &              & Haupthypothese  (Neyman-Pearson) \\
+  $IQR$             &              & Interquartislabstand \\
+  $\mathcal{L}$     &              & Likelihood \\
+  $\mu$             &              & Populationsmittel \\
+  $\mu_i$           &              & Mittel des modellierten Effekts $i$ (Modelle) \\
+  $n$               &              & Stichprobengröße \\
+  $N$               &              & Populationsgröße \\
+  $O$               &              & Chance (\textit{odds}) \\
+  $p$               &              & Anteilswert (\textit{proportion}) \\
+  $P_i$             &              & $i$-tes Perzentil \\
+  $Pr$              &              & Wahrscheinlichkeit (\textit{probability}) \\
+  $\varphi$         &              & Dispersionsparameter \\
+  $Q_i$             &              & $i$-tes Quartil \\
+  $r$               &              & Stichproben-Kovariations-Koeffizient \\
+  $r^2$             &              & Bestimmtheitsmaß (\textit{coefficient of determination}) \\
+  $R^2$             &              & multifaktorielles Bestimmtheitsmaß \\
+  $\rho$            &              & Grundgesamtheits-Kovariations-Koeffizient \\
+  $s_x$             & $sd(x)$      & Standardabweichung der Stichprobe $x$ (\textit{standard deviation}) \\
+  $s^2_x$           & $var(x)$     & Varianz der Stichprobe $x$ \\
+  $SE_{n_x,\pi_x}$      & $se(n_x, \pi_x)$ & Standardfehler (\textit{standard error}) für $n_x$ und $\pi_x$ \\
+  $SQ_{x,y}$        & $sq(x, y)$   & Quadratsumme (\textit{sum of squares}) für Stichproben $x$ und $y$ \\
+  $SP_{x,y}$        & $sp(x, y)$   & Porduktsumme (\textit{sum of products}) für Stichproben $x$ und $y$ \\
+  $\sigma$          & $sd(X)$      & Standardabweichung der Population \\
+  $\sigma^2$        &              & Varianz der Population \\
+  $sig$             &              & Signifikanzniveau (Fisher) \\
+  $U$               &              & Mann-Whitney-Statistik \\
+  $VCOV_m$          & $vcov(m)$    & Varianz-Kovarianz-Matrix von $m$ \\
+  $\chi^2$          &              & Chi-Quadrat-Statistik \\
 \end{longtable}
 
 \vspace{\baselineskip}
-\noindent Random distributions are denoted by bold-printed abbreviated names instead of the fancy symbols sometimes used.
+\noindent Zuvallsverteilungen werden hier durch fettgedruckte Buchtsbaben gekennzeichnet, nicht durch den manchmal üblichen Skript-Font.
+Die kumulative Verteilung wird mit Strich gegeben, also \textbf{Norm\Prime}.
 \vspace{\baselineskip}
 
-\begin{longtable}{p{0.1\textwidth}p{0.9\textwidth}}
-  $\mathbf{Bern}$   & Bernoulli distribution \\
-  $\mathbf{Exp}$    & exponential distribution \\
-  $\mathbf{F}$      & $F$ distribution \\
-  $\mathbf{Norm}$   & normal (Gaussian) distribution \\
-  $\mathbf{t}$      & t distribution \\
-  $\mathbf{Unif}$   & uniform distribution \\
-  $\mathbf{Chisq}$  & $\chi^2$ distribution \\
+\begin{longtable}{p{0.1\textwidth}p{0.1\textwidth}p{0.8\textwidth}}
+  $\mathbf{Bern}$   &  $\mathcal{B}$   & Bernoulliverteilung \\
+  $\mathbf{Exp}$    &  $\mathcal{E}$   & Exponentialverteilung \\
+  $\mathbf{F}$      &  $\mathcal{F}$   & $F$-Verteilung \\
+  $\mathbf{Norm}$   &  $\mathcal{N}$   & Normal-\slash Gauss-Verteilung \\
+  $\mathbf{t}$      &  $\mathcal{T}$   & t-Verteilung \\
+  $\mathbf{Unif}$   &  $\mathcal{U}$   & uniforme Verteilung \\
+  $\mathbf{Chisq}$  &  $\mathcal{X^2}$ & $\chi^2$-Verteilung \\
 \end{longtable}

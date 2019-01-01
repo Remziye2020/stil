@@ -115,4 +115,9 @@ chapterlist:
 podcover:
 	bash podcovers.sh
 
+edit:
+	mvim -c ':set spell spelllang=de' -c ':nnoremap <F15> ]s' -c ':nnoremap <F14> [s' chapters/*.Rnw main.Rnw local*.tex
+
+
+
 FORCE:

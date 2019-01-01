@@ -44,10 +44,75 @@ render_listings()
 
 @
 
-<<child="chapters/01.Rnw">>=
+\part{Wissenschaftliche Inferenz in der Linguistik}
+
+<<child="chapters/LinguistischeEmpirie.Rnw">>=
+@
+
+<<child="chapters/LinguistischeTheorie.Rnw">>=
+@
+
+<<child="chapters/SinnUndUnsinn.Rnw">>=
+@
+
+
+\part{Systeme der statistischen Inferenz}
+
+<<child="chapters/Fisher.Rnw">>=
+@
+
+<<child="chapters/NeymanPearson.Rnw">>=
+@
+
+<<child="chapters/LikelihoodismBayesisch.Rnw">>=
+@
+
+<<child="chapters/SevereTests.Rnw">>=
+@
+
+\part{Datenanalyse}
+
+<<child="StudienPlanen/01.Rnw">>=
+@
+
+<<child="chapters/DatenErfassen.Rnw">>=
+@
+
+<<child="chapters/DatenBeschreiben.Rnw">>=
+@
+
+<<child="chapters/DatenVisualisieren.Rnw">>=
+@
+
+<<child="chapters/DatenSimulieren.Rnw">>=
+@
+
+
+\part{Statistische Tests}
+
+<<child="chapters/Zufallsverteilungen.Rnw">>=
+@
+
+<<child="chapters/Zaehldatenvergleiche.Rnw">>=
+@
+
+<<child="chapters/Mittelwertvergleich.Rnw">>=
+@
+
+<<child="chapters/Varianzanalyse.Rnw">>=
+@
+
+<<child="chapters/Alternativen.Rnw">>=
+@
+
+\part{Modelle}
+
+<<child="chapters/GeneralisierteLineareModelle.Rnw">>=
+@
+
+<<child="chapters/HierarchischeModelle.Rnw">>=
 @
 
 \input{localseealso.tex}
 \input{backmatter.tex}
 \end{document}
-
